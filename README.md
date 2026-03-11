@@ -81,41 +81,100 @@ Example questions you can answer:
 
 ---
 
-## 🚀 Quick Start
+# 🚀 Quick Start
 
-### 1 Clone repository
+Follow these steps to run LifeGraph locally and generate your first life analytics charts.
 
-```
-git clone https://github.com/YOUR_USERNAME/lifegraph.git
+---
+
+## 1 Clone repository
+
+```bash
+git clone https://github.com/Evermaple/LifeGraph.git
 cd lifegraph
 ```
 
-### 2 Install dependencies
+---
 
-```
+## 2 Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 3 Initialize database
+---
 
-```
+## 3 Initialize database
+
+Create the SQLite database:
+
+```bash
 python -m app.db
 ```
 
-### 4 Start API
+This will create:
 
 ```
-uvicorn app.api:app
+data/life.db
 ```
 
-### 5 Generate charts
+---
+
+## 4 Generate demo data
+
+To quickly test the analytics pipeline, generate sample life data:
+
+```bash
+python scripts/generate_demo_data.py
+```
+
+This will generate about **30 days of example metrics**.
+
+Example data:
+
+| date       | sleep | steps | mood | deepwork |
+| ---------- | ----- | ----- | ---- | -------- |
+| 2026-03-01 | 7.5   | 8200  | 4    | 3        |
+| 2026-03-02 | 6.8   | 6000  | 3    | 2        |
+| 2026-03-03 | 8.0   | 10000 | 5    | 4        |
+
+---
+
+## 5 Generate analytics charts
+
+Run:
+
+```bash
+python -m analytics.charts
+```
+
+This will generate charts:
 
 ```
-python analytics/charts.py
+charts_sleep.html
+charts_steps.html
+sleep_mood.html
 ```
 
-Open the generated HTML charts in your browser.
+Open them in your browser.
 
+---
+
+# 📊 What you will see
+
+LifeGraph will generate charts such as:
+
+* Sleep trend over time
+* Daily step trends
+* Sleep vs Mood correlation
+* Productivity insights
+
+Example output:
+
+```
+charts_sleep.html
+```
+![sleep_hours](charts_sleep.jpg)
 ---
 
 ## 🔗 Data Sources
